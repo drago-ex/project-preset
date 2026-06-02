@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\UI\Backend\Sign;
+namespace App\UI\Backend\Sign;
 
 use Drago\Permission\Provider;
 use Drago\Permission\Role;
