@@ -1,0 +1,31 @@
+{
+	"name": "drago-ex/project-preset",
+	"type": "drago-project-resource",
+	"description": "Overlay preset that turns an installed Drago Project.",
+	"license": ["MIT"],
+	"require": {
+		"php": ">=8.3 <9",
+		"drago-ex/project-auth": "^2.0",
+		"drago-ex/project-backend": "^2.0",
+		"drago-ex/project-backend-ui": "^2.0",
+		"drago-ex/project-docker": "^2.0",
+		"drago-ex/project-docker-db": "^2.0",
+		"drago-ex/project-front": "^2.0",
+		"drago-ex/project-permission": "dev-main",
+		"drago-ex/project-settings": "^1.0",
+		"drago-ex/datagrid": "dev-main"
+	},
+	"extra": {
+		"drago-project": {
+			"install-once": true,
+			"priority": 300,
+			"install": {
+				"replace": {
+					"resources/app": "app",
+					"resources/assets": "assets",
+					"resources/package.json": "package.json"
+				}
+			}
+		}
+	}
+}
