@@ -17,9 +17,9 @@
 	},
 	"extra": {
 		"drago-project": {
-			"install-once": true,
-			"priority": 300,
 			"install": {
+				"replace-once": true,
+				"replace-priority": 300,
 				"replace": {
 					"resources/app": "app",
 					"resources/assets": "assets",
