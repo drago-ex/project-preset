@@ -1,6 +1,6 @@
 {
 	"name": "drago-ex/project-preset",
-	"type": "drago-project-resource",
+	"type": "drago-tools-resource",
 	"description": "Overlay preset that turns an installed Drago Project.",
 	"license": ["MIT"],
 	"require": {
@@ -16,7 +16,7 @@
 		"drago-ex/project-settings": "^1.0"
 	},
 	"extra": {
-		"drago-project": {
+		"drago-tools": {
 			"install": {
 				"replace-once": true,
 				"replace-priority": 300,
