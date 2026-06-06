@@ -2,7 +2,7 @@
   "type": "module",
   "dependencies": {
     "bootstrap": "^5.3.8",
-    "dashboard-skeleton-compostrap": "^2.1.3",
+    "dashboard-skeleton-compostrap": "^2.2.0",
     "drago-application": "file:vendor/drago-ex/application",
     "drago-component": "file:vendor/drago-ex/component",
     "drago-datagrid": "file:vendor/drago-ex/datagrid",
@@ -11,8 +11,9 @@
     "naja": "^3.3.3",
     "nette-forms": "^3.5.3",
     "perfect-scrollbar": "^1.5.6",
-    "sidebar-menu-compostrap": "^2.1.3",
-    "sidebar-skeleton-compostrap": "^2.1.3"
+    "sidebar-menu-2-compostrap": "^2.2.0",
+    "sidebar-menu-compostrap": "^2.2.0",
+    "sidebar-skeleton-compostrap": "^2.2.0"
   },
   "devDependencies": {
     "@nette/vite-plugin": "^1.0.1",
