@@ -1,8 +1,8 @@
 ## Drago Project preset
-Overlay preset that turns an installed Drago Project.
+Overlay preset that turns an installed Drago Project into a complete backend-ready stack.
 
-[![PHP version](https://badge.fury.io/ph/drago-ex%2Fproject-preset.svg)](https://badge.fury.io/ph/netis-cms%2Fproject-preset)
-[![Coding Style](https://github.com/drago-ex/project-preset/actions/workflows/coding-style.yml/badge.svg)](https://github.com/netis-cms/project-preset/actions/workflows/coding-style.yml)
+[![PHP version](https://badge.fury.io/ph/drago-ex%2Fproject-preset.svg)](https://badge.fury.io/ph/drago-ex%2Fproject-preset)
+[![Coding Style](https://github.com/drago-ex/project-preset/actions/workflows/coding-style.yml/badge.svg)](https://github.com/drago-ex/project-preset/actions/workflows/coding-style.yml)
 
 ## Requirements
 - PHP >= 8.3
