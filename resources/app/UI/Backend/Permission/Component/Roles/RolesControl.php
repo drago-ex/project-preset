@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Core\Permission\Roles;
+namespace App\UI\Backend\Permission\Component\Roles;
 
-use App\Core\Permission\BaseControl;
-use App\Core\Permission\Factory;
+use App\UI\Backend\Permission\Component\BaseControl;
+use App\UI\Backend\Permission\Component\Factory;
 use Dibi\Exception;
 use Dibi\Result;
 use Drago\Application\UI\Alert;
@@ -49,7 +49,7 @@ class RolesControl extends BaseControl
 
 		$user = $this->getPresenter()->getUser();
 
-		if ($user->isAllowed('Backend:AccessControl', 'roles-write')) {
+		if ($user->isAllowed('Backend:Permission', 'roles-write')) {
 			$grid->addAction(
 				label: 'Edit',
 				signal: 'edit!',

@@ -8,7 +8,7 @@ use Drago\Permission\Provider;
 use Drago\Permission\Role;
 use Nette\Security\Permission;
 
-final class SignPermission implements Provider
+final class PermissionProvider implements Provider
 {
 	private const string Resource = 'Backend:Sign';
 

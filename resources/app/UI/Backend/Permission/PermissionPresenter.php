@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace App\UI\Backend\AccessControl;
+namespace App\UI\Backend\Permission;
 
-use App\Core\Permission\Authorization\AuthorizationControl;
-use App\Core\Permission\Roles\RolesControl;
-use App\Core\Permission\Users\UsersControl;
 use App\UI\Backend\BackendPresenter;
+use App\UI\Backend\Permission\Component\Authorization\AuthorizationControl;
+use App\UI\Backend\Permission\Component\Roles\RolesControl;
+use App\UI\Backend\Permission\Component\Users\UsersControl;
 use Exception;
 use Throwable;
 
 
-/** Access control presenter. */
-class AccessControlPresenter extends BackendPresenter
+/** Permission presenter. */
+class PermissionPresenter extends BackendPresenter
 {
 	public function __construct(
 		private readonly UsersControl $usersControl,
