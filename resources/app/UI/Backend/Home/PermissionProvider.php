@@ -8,6 +8,7 @@ use Drago\Permission\Provider;
 use Drago\Permission\Role;
 use Nette\Security\Permission;
 
+
 final class PermissionProvider implements Provider
 {
 	private const string Resource = 'Front:Home';
