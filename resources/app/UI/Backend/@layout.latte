@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{ifset title}{include title|stripHtml|firstUpper} &bull;{/ifset} {$settings->website}</title>
+    <title>{ifset title}{include title|stripHtml|firstUpper} &bull;{/ifset} {$settings->get('website')}</title>
 
     {asset 'admin.js'}
 </head>
@@ -21,7 +21,7 @@
 
             <!-- title -->
             <a class="navbar-brand" n:href="Admin:"><i class="fa-brands fa-medapps text-primary"></i>
-                <span class="text-body-emphasis">{$settings->website}</span>
+                <span class="text-body-emphasis">{$settings->get('website')}</span>
             </a>
 
             <!-- navbar navigation -->
@@ -91,7 +91,7 @@
 
         <!-- license rights, do not delete this piece of code -->
         <footer class="text-end mt-3 mb-3">
-            <p class="text-muted">&copy {$settings->website}</p>
+            <p class="text-muted">&copy {$settings->get('website')}</p>
         </footer>
     </div>
 </div>
