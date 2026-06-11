@@ -44,3 +44,7 @@
 "Reset": "Resetovat"
 "Search...": "Hledat..."
 "All": "Vše"
+
+# site settings
+"website": "Název stránek"
+"description": "Popis stránek"
