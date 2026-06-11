@@ -45,6 +45,9 @@ class BackendPresenter extends BasePresenter
 			->addItem('Dashboard', 'Admin:')
 			->setIcon('fa-solid fa-mug-hot bell')
 
+			->addItem('Settings', 'Settings:')
+			->setIcon('fa-solid fa-globe bell')
+
 			// Complex item with permissions and submenu
 			->addItem('Permissions', 'Permission:*')
 			->setIcon('fa-solid fa-gear bell')
