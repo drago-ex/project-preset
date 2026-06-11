@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\UI;
 
-use App\UI\Backend\Settings\SettingsRequire;
+use App\Core\Settings\SettingsRequire;
 use Drago\Localization\TranslatorAdapter;
 use Drago\Permission\Authorization;
 use Nette\Application\UI\Presenter;
