@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\UI;
 
 
-use App\UI\Backend\Settings\Settings;
+use App\Core\Settings\Settings;
 use Drago\Application\UI\ExtraTemplate;
 
 
