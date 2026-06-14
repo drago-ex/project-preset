@@ -18,7 +18,6 @@ use Nette\Application\Attributes\Requires;
 use Nette\Application\UI\Form;
 
 
-/** Roles control. */
 class RolesControl extends BaseControl
 {
 	public string $permissionsDestination = 'permissions';
@@ -76,7 +75,6 @@ class RolesControl extends BaseControl
 	}
 
 
-	/** Renders the control. */
 	public function render(): void
 	{
 		$template = $this->createRender();
@@ -85,7 +83,6 @@ class RolesControl extends BaseControl
 	}
 
 
-	/** Creates roles form. */
 	protected function createComponentRoles(): Form
 	{
 		$form = $this->factory->create();
