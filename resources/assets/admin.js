@@ -1,14 +1,16 @@
 // these JS + SCSS will be automatically available after installing the package
 import { registerNajaExtensions } from "./core/base.js";
 import { initAdminTheme } from "./core/admin-theme.js";
-import { BootstrapComponents  } from "drago-component";
-import ToastHandler from 'drago-application/bootstrap-toast';
-import PermissionToggle from "./naja/permission-toggle.js";
 import Spinner from "./naja/spinner.js";
-import SubmitButtonDisable from "drago-form/submit-disable";
-import TomSelectHandler from "drago-form/tom-select";
+import PermissionToggle from "./naja/permission-toggle.js";
+
+// drago-ex extensions
+import { SubmitButtonDisable, TomSelectHandler } from "drago-form";
+import { BootstrapComponents, BootstrapDropdowns } from "drago-component";
+import { ToastHandler } from 'drago-application';
 import DataGrid from "drago-datagrid";
 
+// page styles
 import "./admin.scss";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -16,12 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 new DataGrid().initialize(naja);
-
 registerNajaExtensions(
-	BootstrapComponents,
-	ToastHandler,
-	PermissionToggle,
 	Spinner,
+	PermissionToggle,
 	SubmitButtonDisable,
-	TomSelectHandler
+	TomSelectHandler,
+	BootstrapComponents,
+	BootstrapDropdowns,
+	ToastHandler
 );
