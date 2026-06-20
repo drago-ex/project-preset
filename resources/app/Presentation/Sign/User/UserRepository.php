@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\UI\Sign\User;
+namespace App\Presentation\Sign\User;
 
-use App\UI\Backend\Permission\Component\Roles\RolesEntity;
-use App\UI\Backend\Permission\Component\Users\UsersRolesEntity;
+use App\Presentation\Backend\Permission\Component\Roles\RolesEntity;
+use App\Presentation\Backend\Permission\Component\Users\UsersRolesEntity;
 use Dibi\Connection;
 use Dibi\Exception;
 use Drago\Attr\AttributeDetectionException;
@@ -14,7 +14,6 @@ use Drago\Database\Database;
 use Drago\Permission\Role;
 
 
-/** Repository for accessing user data in the database. */
 #[Table(UserEntity::Table, UserEntity::ColumnId, class: UserEntity::class)]
 class UserRepository
 {
@@ -56,7 +55,7 @@ class UserRepository
 
 
 	/**
-	 * Find user by token.
+	 * Finds a user by their token.
 	 * @throws AttributeDetectionException
 	 * @throws Exception
 	 */

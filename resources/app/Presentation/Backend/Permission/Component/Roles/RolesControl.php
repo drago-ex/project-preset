@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\UI\Backend\Permission\Component\Roles;
+namespace App\Presentation\Backend\Permission\Component\Roles;
 
-use App\UI\Backend\Permission\Component\BaseControl;
-use App\UI\Backend\Permission\Component\Factory;
+use App\Presentation\Backend\Permission\Component\BaseControl;
+use App\Presentation\Backend\Permission\Component\Factory;
 use Dibi\Exception;
 use Dibi\Result;
 use Drago\Application\UI\Alert;
@@ -140,7 +140,6 @@ class RolesControl extends BaseControl
 	}
 
 
-	/** Redirects to permissions. */
 	public function handlePermissions(int $id): void
 	{
 		$this->getPresenter()->redirect($this->permissionsDestination, [

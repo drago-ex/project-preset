@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\UI\Backend\Permission\Component\Users;
+namespace App\Presentation\Backend\Permission\Component\Users;
 
-use App\UI\Backend\Permission\Component\BaseControl;
-use App\UI\Backend\Permission\Component\Factory;
-use App\UI\Backend\Permission\Component\Roles\RolesRepository;
+use App\Presentation\Backend\Permission\Component\BaseControl;
+use App\Presentation\Backend\Permission\Component\Factory;
+use App\Presentation\Backend\Permission\Component\Roles\RolesRepository;
 use Dibi\DriverException;
 use Dibi\Exception;
 use Dibi\Result;

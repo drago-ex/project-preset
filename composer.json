@@ -1,7 +1,7 @@
 {
 	"name": "drago-ex/project-preset",
 	"type": "drago-tools-resource",
-	"description": "Overlay preset that turns an installed Drago Project.",
+	"description": "Overlay preset that turns an installed Drago Project into a backend-ready stack.",
 	"license": ["MIT"],
 	"require": {
 		"php": ">=8.3 <9",

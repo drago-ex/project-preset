@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\UI\Front\Home;
+namespace App\Presentation\Sign;
 
 use Drago\Permission\Provider;
 use Drago\Permission\Role;
@@ -11,7 +11,7 @@ use Nette\Security\Permission;
 
 final class PermissionProvider implements Provider
 {
-	private const string Resource = 'Front:Home';
+	private const string Resource = 'Sign';
 
 
 	public function register(Permission $acl): void
