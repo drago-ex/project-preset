@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace App\Presentation\Backend;
 
 use App\Core\User\UserAccess;
+use App\Presentation\Accessory\RequireLogged;
 use App\Presentation\Backend\Accessory\Menu\SidebarBuilder;
 use App\Presentation\Backend\Accessory\Menu\SidebarItem;
 use App\Presentation\BasePresenter;
-use App\Presentation\Accessory\RequireLogged;
 use Nette\DI\Attributes\Inject;
 
 
