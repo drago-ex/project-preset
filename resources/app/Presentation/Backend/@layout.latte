@@ -40,10 +40,17 @@
 
 			<div class="ms-auto d-flex align-items-center">
 
-				<!-- theme toggle -->
+				{embed '../Accessory/Widget/@dropdown.latte', name: 'Translate', icon: 'fa-solid fa-language', menu: 'end'}
+					{import '../Accessory/Widget/@lang-switch.latte'}
+					{block menu}
+						{include lang-switch, lang: 'cs', name: 'Czech', class: 'dropdown-item', tag: 'li'}
+						{include lang-switch, lang: 'en', name: 'English', class: 'dropdown-item', tag: 'li'}
+					{/block}
+				{/embed}
+
 				{include '../Accessory/Widget/@theme-switch.latte',
 					class: 'nav-link py-2 px-0 px-lg-2 border-0',
-					themeSwitchId: 'theme-toggle',
+					icon: true,
 				}
 
 				<!-- sidebar toggle -->
@@ -63,7 +70,6 @@
 
 					{* sidebar menu *}
 					{include 'Accessory/Menu/@menu.user.latte'}
-					{include 'Accessory/Menu/@menu.translate.latte'}
 					{include 'Accessory/Menu/@menu.latte'}
 
 				</div>
