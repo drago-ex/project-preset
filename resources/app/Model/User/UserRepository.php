@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Presentation\Sign\User;
+namespace App\Model\User;
 
 use App\Presentation\Backend\Permission\Component\Roles\RolesEntity;
 use App\Presentation\Backend\Permission\Component\Users\UsersRolesEntity;
