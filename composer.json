@@ -31,6 +31,9 @@
 					"resources/package.json": "package.json"
 				}
 			}
+		},
+		"drago-translator": {
+			"translation": "app/Presentation/Backend/Translate"
 		}
 	}
 }
