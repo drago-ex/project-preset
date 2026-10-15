@@ -1,0 +1,11 @@
+includes:
+	- vendor/phpstan/phpstan-nette/extension.neon
+
+parameters:
+	level: 8
+	# Other application files depend on resources overlaid by the consuming project.
+	paths:
+		- resources/app/Presentation/Backend/Admin/PermissionProvider.php
+		- resources/app/Presentation/Backend/Settings/PermissionProvider.php
+		- resources/app/Presentation/Front/Home/PermissionProvider.php
+		- resources/app/Presentation/Sign/PermissionProvider.php
