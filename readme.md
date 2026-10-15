@@ -7,7 +7,7 @@ Overlay preset that turns an installed Drago Project into a complete backend-rea
 
 ## Requirements
 
-- PHP >= 8.3
+- PHP >= 8.3, < 9
 - Nette Framework
 - Composer
 - Docker
