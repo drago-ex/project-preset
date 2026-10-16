@@ -8,13 +8,15 @@ use Drago\Permission\Provider;
 use Drago\Permission\Role;
 use Nette\Security\Permission;
 
+
 final class PermissionProvider implements Provider
 {
-    private const string Resource = 'Account';
+	private const string Resource = 'Account';
 
-    public function register(Permission $acl): void
-    {
-        $acl->addResource(self::Resource);
-        $acl->allow(Role::RoleUser, self::Resource);
-    }
+
+	public function register(Permission $acl): void
+	{
+		$acl->addResource(self::Resource);
+		$acl->allow(Role::RoleUser, self::Resource);
+	}
 }
