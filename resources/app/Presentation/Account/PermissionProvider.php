@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\Presentation\Account;
+namespace App\Presentation\Account;
 
 use Drago\Permission\Provider;
 use Drago\Permission\Role;
