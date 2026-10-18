@@ -30,3 +30,11 @@ composer require drago-ex/project-preset
 - [Backend Admin](https://github.com/drago-ex/project-backend)
 - [Backend UI](https://github.com/drago-ex/project-backend-ui)
 - [Application Settings](https://github.com/drago-ex/project-settings)
+
+## Permission providers
+
+The access rules of the included packages are generated into the project by:
+
+```bash
+php vendor/bin/create-permission --packages
+```
