@@ -7,13 +7,18 @@ Use this file as package-specific guidance when working in this repository. Keep
 - **Type**: drago-tools-resource
 - **Purpose**: Overlay preset that turns an installed Drago Project into a backend-ready stack.
 - **PHP**: >=8.3 <9
-- **Runtime dependencies**: drago-ex/project-docker (^2.0), drago-ex/project-docker-db (^2.0), drago-ex/project-front (^2.0), drago-ex/project-auth (^2.0), drago-ex/project-backend (^2.0), drago-ex/project-backend-ui (^2.0), drago-ex/project-permission (^1.0), drago-ex/project-settings (^1.0)
+- **Runtime dependencies**: drago-ex/project-docker (^2.0), drago-ex/project-docker-db (^2.0), drago-ex/project-front (^2.0), drago-ex/project-backend (^2.0), drago-ex/project-backend-ui (^2.0), drago-ex/permission (^2.0), drago-ex/project-permission (^1.0), drago-ex/project-settings (^1.0)
 - **License**: MIT
 
 ## Repository Layout
 - `resources/`: application resources contributed to the consuming Drago project.
 - `.github/`: CI workflows; keep their PHP versions and commands consistent with Composer and the package scripts.
 - `composer.json`: package metadata, dependency constraints, autoloading, and available Composer scripts.
+
+## Key Parts
+- `resources/app` and `resources/assets` are installed by `replace` (`replace-once`, `replace-priority` 300), so they override the other packages once when the project is composed.
+- The copied `BasePresenter` uses `Drago\Permission\Authorization` and `UserRepository` uses `drago-ex/project-permission` entities, hence both permission dependencies.
+- The preset ships no `PermissionProvider` classes: they are generated from the packages' `permission.php` by `create-permission --packages`, which `create-netis` (netis-cms/netis) runs and adds to the project's Composer scripts.
 
 ## Dependencies
 
