@@ -10,7 +10,8 @@
 		"drago-ex/project-front": "^2.0",
 		"drago-ex/project-backend": "^2.0",
 		"drago-ex/project-backend-ui": "^2.0",
-		"drago-ex/permission": "^2.3",
+		"drago-ex/permission": "^2.4",
+		"drago-ex/datagrid": "^2.0",
 		"drago-ex/project-permission": "^1.0",
 		"drago-ex/project-settings": "^1.0"
 	},

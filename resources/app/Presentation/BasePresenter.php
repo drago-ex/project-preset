@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Presentation;
 
 use App\Core\Settings\SettingsRequire;
+use Drago\Datagrid\DataGrid;
 use Drago\Localization\TranslatorAdapter;
 use Drago\Permission\Authorization;
 use Nette\Application\UI\Presenter;
@@ -17,16 +18,9 @@ abstract class BasePresenter extends Presenter
 	use Authorization;
 	use SettingsRequire;
 
-	/** @return list<string> */
-	protected function readOnlySignals(): array
+	/** Sorting, filtering and paging a grid only reads, so it is checked as "{component}-read". */
+	protected function isReadOnlySignal(string $receiver, string $name): bool
 	{
-		return ['sort', 'page', 'resetFilters', 'setPageSize'];
-	}
-
-
-	/** @return list<string> */
-	protected function readOnlyReceivers(): array
-	{
-		return ['Grid-filters', 'Grid-paginator', 'Grid-pageSize'];
+		return DataGrid::isReadOnlySignal($receiver, $name);
 	}
 }
