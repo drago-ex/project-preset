@@ -16,6 +16,7 @@ Use this file as package-specific guidance when working in this repository. Keep
 - `composer.json`: package metadata, dependency constraints, autoloading, and available Composer scripts.
 
 ## Key Parts
+- The preset has no `Backend/@layout.latte`: the administration layout comes from project-backend-ui (its own copy was a stale fork without the `noindex` robots meta, removed 2026-10-22). Override a file here only when the preset really needs it different.
 - `resources/app` and `resources/assets` are installed by `replace` (`replace-once`, `replace-priority` 300), so they override the other packages once when the project is composed.
 - The copied `BasePresenter` uses `Drago\Permission\Authorization` and `UserRepository` uses `drago-ex/project-permission` entities, hence both permission dependencies.
 - The preset ships no `PermissionProvider` classes: they are generated from the packages' `permission.php` by `create-permission --packages`, which `create-netis` (netis-cms/netis) runs and adds to the project's Composer scripts.
