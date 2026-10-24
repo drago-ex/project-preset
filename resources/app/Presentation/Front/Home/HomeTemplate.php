@@ -12,4 +12,7 @@ class HomeTemplate extends BaseTemplate
 {
 	/** @var ArticleEntity[] the latest published articles */
 	public array $articles;
+
+	/** @var array<int, array{name: string, avatar: string}> their authors by the user id */
+	public array $authors = [];
 }

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Presentation\Front\Home;
 
+use App\Model\Blog\ArticleAuthors;
 use App\Model\Blog\ArticleRepository;
 use App\Presentation\BasePresenter;
 use Drago\Attr\AttributeDetectionException;
@@ -18,6 +19,7 @@ final class HomePresenter extends BasePresenter
 
 	public function __construct(
 		private readonly ArticleRepository $articleRepository,
+		private readonly ArticleAuthors $articleAuthors,
 	) {
 		parent::__construct();
 	}
@@ -26,9 +28,11 @@ final class HomePresenter extends BasePresenter
 	/** @throws AttributeDetectionException */
 	public function renderDefault(): void
 	{
-		$this->template->articles = $this->articleRepository
+		$this->template->articles = $articles = $this->articleRepository
 			->getPublishedArticles()
 			->limit(self::LatestArticles)
 			->recordAll();
+
+		$this->template->authors = $this->articleAuthors->forArticles($articles);
 	}
 }

@@ -26,13 +26,6 @@ abstract class BasePresenter extends Presenter
 	public PageMenu $pageMenu;
 
 
-	/** Sorting, filtering and paging a grid only reads, so it is checked as "{component}-read". */
-	protected function isReadOnlySignal(string $receiver, string $name): bool
-	{
-		return DataGrid::isReadOnlySignal($this, $receiver, $name);
-	}
-
-
 	/** @throws AttributeDetectionException */
 	protected function beforeRender(): void
 	{
@@ -42,5 +35,12 @@ abstract class BasePresenter extends Presenter
 		if (str_starts_with((string) $this->getName(), 'Front:')) {
 			$this->template->menuPages = $this->pageMenu->getItems();
 		}
+	}
+
+
+	/** Sorting, filtering and paging a grid only reads, so it is checked as "{component}-read". */
+	protected function isReadOnlySignal(string $receiver, string $name): bool
+	{
+		return DataGrid::isReadOnlySignal($this, $receiver, $name);
 	}
 }
