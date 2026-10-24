@@ -13,6 +13,6 @@ abstract class BaseTemplate extends ExtraTemplate
 	public string $lang;
 	public Settings $settings;
 
-	/** @var array<string, string> static pages of the front menu, slug => title */
+	/** @var array<int|string, string> static pages of the front menu, slug => title (an all-digit slug is an int key) */
 	public array $menuPages = [];
 }
