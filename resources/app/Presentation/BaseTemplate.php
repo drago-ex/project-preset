@@ -12,4 +12,7 @@ abstract class BaseTemplate extends ExtraTemplate
 {
 	public string $lang;
 	public Settings $settings;
+
+	/** @var array<string, string> static pages of the front menu, slug => title */
+	public array $menuPages = [];
 }

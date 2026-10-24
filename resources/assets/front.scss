@@ -1,0 +1,62 @@
+@import 'core/base';
+@import 'naja/spinner';
+@import 'theme-switcher-compostrap/src/scss/theme-switcher';
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+//
+// front style
+//
+
+html,
+body {
+	min-height: 100%;
+}
+
+.front-page {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	padding-top: 4rem;
+	background-color: var(--bs-tertiary-bg);
+}
+
+.front-navbar {
+	background-color: var(--bs-body-bg);
+
+	.nav-link.active {
+		font-weight: 600;
+	}
+
+	.dropdown-toggle,
+	[data-theme-switcher] {
+		color: var(--bs-navbar-color);
+
+		&:hover {
+			color: var(--bs-navbar-hover-color);
+		}
+	}
+}
+
+.front-main {
+	width: 100%;
+	padding-block: 2rem;
+}
+
+.front-hero {
+	background:
+		radial-gradient(circle at top left, rgba(var(--bs-primary-rgb), 0.15), transparent 60%),
+		var(--bs-body-bg);
+}
+
+.front-card {
+	transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+	&:hover {
+		transform: translateY(-2px);
+		box-shadow: var(--bs-box-shadow) !important;
+	}
+}
+
+.front-footer {
+	background-color: var(--bs-body-bg);
+}

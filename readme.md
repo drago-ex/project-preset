@@ -32,6 +32,15 @@ composer require drago-ex/project-preset
 - [Backend Admin](https://github.com/drago-ex/project-backend)
 - [Backend UI](https://github.com/drago-ex/project-backend-ui)
 - [Application Settings](https://github.com/drago-ex/project-settings)
+- [Blog](https://github.com/drago-ex/project-blog)
+- [Static Pages](https://github.com/drago-ex/project-static-page)
+
+## Front
+
+The preset replaces the plain front layout of project-front with a Bootstrap one: a navbar with the home page,
+the blog and the static pages marked "Show in the menu", a language switch, and the signed-in user's menu
+(account, administration when the user may open it, theme, sign out) or a sign-in button. The home page shows
+the latest articles of the blog.
 
 ## Permission providers
 

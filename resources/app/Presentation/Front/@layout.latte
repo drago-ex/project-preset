@@ -1,0 +1,104 @@
+{templateType App\Presentation\BaseTemplate}
+{varType Drago\Application\UI\Flashes[] $flashes}
+{varType App\Core\Security\CurrentUser $user}
+{varType Nette\Application\UI\Presenter $presenter}
+{import '../Accessory/Widget/@brand.latte'}
+
+<!doctype html>
+<html lang="{$lang}" data-bs-theme="light">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{ifset title}{include title|stripHtml|trim|firstUpper} &bull; {/ifset}{include brand|stripHtml|trim}</title>
+	{* a page sets $description (e.g. a static page) to get a meta description for search engines *}
+	<meta n:ifset="$description" name="description" content={$description}>
+
+	{asset 'front.js'}
+</head>
+
+<body class="front-page">
+
+<header>
+	<nav class="navbar navbar-expand-lg fixed-top border-bottom front-navbar">
+		<div class="container">
+			<a class="navbar-brand d-flex align-items-center gap-2" n:href=":Front:Home:">
+				{include brand-logo}
+				<span class="fw-semibold text-body-emphasis">{include brand}</span>
+			</a>
+
+			<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#front-menu"
+					aria-controls="front-menu" aria-expanded="false" aria-label="{_'Menu'}">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="front-menu">
+				{* the blog and the static pages marked "Show in the menu" in the administration *}
+				<ul class="navbar-nav me-auto">
+					<li class="nav-item">
+						<a n:href=":Front:Home:" n:class="nav-link, $presenter->isLinkCurrent(':Front:Home:*') ? active">{_'Homepage'}</a>
+					</li>
+					<li class="nav-item">
+						<a n:href=":Front:Blog:" n:class="nav-link, $presenter->isLinkCurrent(':Front:Blog:*') ? active">{_'Blog'}</a>
+					</li>
+					<li n:foreach="$menuPages as $slug => $title" class="nav-item">
+						<a n:href=":Front:Page:default, slug: $slug" n:class="nav-link, $presenter->isLinkCurrent(':Front:Page:default', [slug: $slug]) ? active">{$title}</a>
+					</li>
+				</ul>
+
+				<div class="d-flex flex-wrap align-items-center gap-1">
+					{embed '../Accessory/Widget/@dropdown.latte', name: 'Translate', icon: 'fa-solid fa-language', menu: 'end'}
+						{import '../Accessory/Widget/@lang-switch.latte'}
+						{block menu}
+							{include lang-switch, lang: 'cs', name: 'Czech', class: 'dropdown-item', tag: 'li'}
+							{include lang-switch, lang: 'en', name: 'English', class: 'dropdown-item', tag: 'li'}
+						{/block}
+					{/embed}
+
+					{if $user->isLoggedIn()}
+						{* like @dropdown.latte, but the user name is data and is not translated *}
+						<div class="dropdown custom-dropdown">
+							<button class="btn btn-link dropdown-toggle text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<i class="fa-regular fa-user"></i>
+								<span>{$user->getUserIdentity()->username}</span>
+							</button>
+							<ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm">
+								<li><a class="dropdown-item" n:href=":Account:">{_'Account'}</a></li>
+								<li n:if="$user->isPermitted('Backend:Admin', 'default-read')">
+									<a class="dropdown-item" n:href=":Backend:Admin:">{_'Administration'}</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li>{include '../Accessory/Widget/@theme-switch.latte', class: 'dropdown-item', icon: true}</li>
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" n:href=":Sign:out">{_'Sign out'}</a></li>
+							</ul>
+						</div>
+					{else}
+						{include '../Accessory/Widget/@theme-switch.latte', class: 'nav-link px-2', icon: true}
+						<a n:href=":Sign:in" class="btn btn-primary btn-sm ms-1">{_'Sign in'}</a>
+					{/if}
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<main role="main" class="front-main flex-shrink-0">
+	<div class="container">
+		{snippet message}
+			{include '../Accessory/Widget/@toast.latte', flashes: $flashes}
+		{/snippet}
+
+		{include content}
+	</div>
+</main>
+
+<footer class="front-footer mt-auto py-4 border-top">
+	<div class="container d-flex flex-wrap justify-content-between gap-2 small text-body-secondary">
+		<span>&copy; {date('Y')} {include brand|stripHtml|trim}</span>
+		<a n:href=":Front:Blog:" class="link-secondary">{_'Blog'}</a>
+	</div>
+</footer>
+
+</body>
+</html>

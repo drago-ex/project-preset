@@ -13,7 +13,9 @@
 		"drago-ex/permission": "^2.4",
 		"drago-ex/datagrid": "^2.0",
 		"drago-ex/project-permission": "^1.0",
-		"drago-ex/project-settings": "^1.0"
+		"drago-ex/project-settings": "^1.0",
+		"drago-ex/project-blog": "^1.0",
+		"drago-ex/project-static-page": "^1.0"
 	},
 	"require-dev": {
 		"phpstan/phpstan-nette": "^2.0"
@@ -29,6 +31,9 @@
 					"resources/package.json": "package.json"
 				}
 			}
+		},
+		"drago-translator": {
+			"translation": "app/Presentation/Front/Translate"
 		}
 	},
 	"scripts": {

@@ -9,6 +9,7 @@ import { SubmitButtonDisable, TomSelectHandler } from 'drago-form';
 import { BootstrapComponents, BootstrapDropdowns } from 'drago-component';
 import { ToastHandler } from 'drago-application';
 import DataGrid from 'drago-datagrid';
+import TexyToolbar from 'drago-texy-toolbar';
 
 // page styles
 import './admin.scss';
@@ -25,5 +26,6 @@ registerNajaExtensions(
 	TomSelectHandler,
 	BootstrapComponents,
 	BootstrapDropdowns,
-	ToastHandler
+	ToastHandler,
+	TexyToolbar
 );
