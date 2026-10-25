@@ -273,10 +273,13 @@ class ArticleControl extends BaseControl
 		$form->addTextAreaInput(ArticleValues::Perex, 'Perex')
 			->setNullable();
 
-		$form->addUpload(ArticleValues::Upload, 'Upload a main image')
-			->addRule($form::Image, 'The image must be JPEG, PNG, GIF or WebP.')
-			->addRule($form::MaxFileSize, 'The image can have at most 8 MB.', self::MaxImageSize)
-			->addRule(ArticleImages::validatePixels(...), 'The image can have at most %d megapixels.', ArticleImages::MaxPixels / 1_000_000);
+		// the Image rule and the resizing need GD (only suggested); without it the form has no upload, so it still works
+		if (ArticleImages::isSupported()) {
+			$form->addUpload(ArticleValues::Upload, 'Upload a main image')
+				->addRule($form::Image, 'The image must be JPEG, PNG, GIF or WebP.')
+				->addRule($form::MaxFileSize, 'The image can have at most 8 MB.', self::MaxImageSize)
+				->addRule(ArticleImages::validatePixels(...), 'The image can have at most %d megapixels.', ArticleImages::MaxPixels / 1_000_000);
+		}
 
 		$form->addCheckbox(ArticleValues::RemoveImage, 'Remove the main image');
 
@@ -339,7 +342,6 @@ class ArticleControl extends BaseControl
 	/**
 	 * The link of the state badge that switches the comments of an article, null when it is not clickable
 	 * (the permission steps of the README return null without the write privilege).
-	 * @phpstan-ignore return.unusedType
 	 */
 	private function getToggleCommentsLink(int $id): ?string
 	{
