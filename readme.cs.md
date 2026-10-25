@@ -37,8 +37,8 @@ composer require drago-ex/project-preset
 
 ## Veřejná část
 
-Preset nahradí jednoduchý layout veřejné části z project-front layoutem na Bootstrapu: navbar s úvodní stránkou,
-blogem a statickými stránkami se zaškrtnutým „Zobrazit v menu“, přepínačem jazyka a nabídkou přihlášeného uživatele
+Preset nahradí jednoduchý layout veřejné části z project-front layoutem na Bootstrapu: navbar s blogem a statickými
+stránkami se zaškrtnutým „Zobrazit v menu“ (logo vede na úvodní stránku) a nabídkou přihlášeného uživatele
 (účet, administrace, pokud do ní smí, motiv, odhlášení), případně tlačítkem pro přihlášení. Úvodní stránka zobrazí
 nejnovější články blogu.
 

@@ -37,8 +37,8 @@ composer require drago-ex/project-preset
 
 ## Front
 
-The preset replaces the plain front layout of project-front with a Bootstrap one: a navbar with the home page,
-the blog and the static pages marked "Show in the menu", a language switch, and the signed-in user's menu
+The preset replaces the plain front layout of project-front with a Bootstrap one: a navbar with the blog and the
+static pages marked "Show in the menu" (the logo leads to the home page), and the signed-in user's menu
 (account, administration when the user may open it, theme, sign out) or a sign-in button. The home page shows
 the latest articles of the blog.
 
