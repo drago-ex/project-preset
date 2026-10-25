@@ -3,7 +3,7 @@
 	"dependencies": {
 		"@fortawesome/fontawesome-free": "^7.1.0",
 		"bootstrap": "^5.3.8",
-		"dashboard-skeleton-compostrap": "^3.0.0",
+		"dashboard-skeleton-compostrap": "^3.0.4",
 		"drago-application": "file:vendor/drago-ex/application",
 		"drago-component": "file:vendor/drago-ex/component",
 		"drago-datagrid": "file:vendor/drago-ex/datagrid",
@@ -13,10 +13,10 @@
 		"naja": "^3.3.3",
 		"nette-forms": "^3.5.3",
 		"perfect-scrollbar": "^1.5.6",
-		"sidebar-menu-2-compostrap": "^3.0.0",
-		"sidebar-menu-compostrap": "^3.0.0",
-		"sidebar-skeleton-compostrap": "^3.0.0",
-		"theme-switcher-compostrap": "^1.0.1"
+		"sidebar-menu-2-compostrap": "^3.0.4",
+		"sidebar-menu-compostrap": "^3.0.4",
+		"sidebar-skeleton-compostrap": "^3.0.5",
+		"theme-switcher-compostrap": "^2.0.1"
 	},
 	"devDependencies": {
 		"@nette/vite-plugin": "^1.1.0",
