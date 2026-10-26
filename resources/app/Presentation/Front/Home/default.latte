@@ -4,28 +4,9 @@
 	<section>
 		<div class="d-flex align-items-baseline justify-content-between mb-5">
 			<h1 class="display-6 fw-semibold mb-0">{_'Latest articles'}</h1>
-			<a n:if="$articles" n:href=":Front:Blog:" class="link-secondary small">{_'All articles'} &rarr;</a>
+			<a n:if="$list->articles" n:href=":Front:Blog:" class="link-secondary small">{_'All articles'} &rarr;</a>
 		</div>
 
-		{* the newest article over the whole row, the others as cards *}
-		{define article, string $file, App\Model\Blog\ArticleEntity $article}
-			{include $file,
-				article: $article,
-				author: $authors[$article->author_id] ?? null,
-				category: $categories[$article->category_id] ?? null,
-			}
-		{/define}
-
-		<div n:if="$articles" class="mb-5">
-			{include article, file: '../Blog/@article-featured.latte', article: $articles[array_key_first($articles)]}
-		</div>
-
-		<div n:if="count($articles) > 1" class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
-			<div n:foreach="array_slice($articles, 1) as $article" class="col">
-				{include article, file: '../Blog/@article-item.latte', article: $article}
-			</div>
-		</div>
-
-		<p n:if="!$articles" class="text-body-secondary">{_'No published articles yet.'}</p>
+		{include '../Blog/@article-list.latte', list: $list}
 	</section>
 {/block}

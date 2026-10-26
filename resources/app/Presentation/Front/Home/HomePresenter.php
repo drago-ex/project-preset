@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace App\Presentation\Front\Home;
 
-use App\Model\Blog\ArticleAuthors;
-use App\Model\Blog\ArticleRepository;
-use App\Model\Blog\CategoryEntity;
-use App\Model\Blog\CategoryRepository;
+use App\Model\Blog\ArticleListFactory;
 use App\Presentation\BasePresenter;
 use Drago\Attr\AttributeDetectionException;
 
@@ -20,9 +17,7 @@ final class HomePresenter extends BasePresenter
 
 
 	public function __construct(
-		private readonly ArticleRepository $articleRepository,
-		private readonly ArticleAuthors $articleAuthors,
-		private readonly CategoryRepository $categoryRepository,
+		private readonly ArticleListFactory $articleListFactory,
 	) {
 		parent::__construct();
 	}
@@ -31,12 +26,6 @@ final class HomePresenter extends BasePresenter
 	/** @throws AttributeDetectionException */
 	public function renderDefault(): void
 	{
-		$this->template->articles = $articles = $this->articleRepository
-			->getPublishedArticles()
-			->limit(self::LatestArticles)
-			->recordAll();
-
-		$this->template->authors = $this->articleAuthors->forArticles($articles);
-		$this->template->categories = array_column($this->categoryRepository->getUsedCategories(), null, CategoryEntity::PrimaryKey);
+		$this->template->list = $this->articleListFactory->create(limit: self::LatestArticles);
 	}
 }
