@@ -21,6 +21,11 @@ Preset, který z nainstalovaného Drago Project udělá kompletní sestavu s adm
 composer require drago-ex/project-preset
 ```
 
+## Soubory kopírované do projektu
+
+Soubory do projektu kopíruje [drago-ex/project-tools](https://github.com/drago-ex/project-tools)
+podle nastavení v `extra.drago-tools` v `composer.json` tohoto balíčku.
+
 ## Obsažené balíčky
 
 - [Docker](https://github.com/drago-ex/project-docker)

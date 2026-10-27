@@ -21,6 +21,11 @@ Overlay preset that turns an installed Drago Project into a complete backend-rea
 composer require drago-ex/project-preset
 ```
 
+## Files copied into the project
+
+The files are copied into the project by [drago-ex/project-tools](https://github.com/drago-ex/project-tools),
+as set in `extra.drago-tools` of this package's `composer.json`.
+
 ## Included packages
 
 - [Docker Setup](https://github.com/drago-ex/project-docker)
