@@ -2,7 +2,6 @@
 import { registerNajaExtensions } from './core/base.js';
 import { initAdminTheme } from './core/admin-theme.js';
 import Spinner from './naja/spinner.js';
-import PermissionToggle from './naja/permission-toggle.js';
 
 // drago-ex extensions
 import { SubmitButtonDisable, TomSelectHandler } from 'drago-form';
@@ -21,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 new DataGrid().initialize(naja);
 registerNajaExtensions(
 	Spinner,
-	PermissionToggle,
 	SubmitButtonDisable,
 	TomSelectHandler,
 	BootstrapComponents,

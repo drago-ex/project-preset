@@ -1,9 +1,0 @@
-# The administration menu; more items are added in further N.menu.neon files next to the presenters (higher numbers load later).
-parameters:
-	sidebar:
-		System:
-			- {title: Dashboard, link: 'Admin:', icon: fa-solid fa-mug-hot bell, allowAny: [Backend:Admin, default-read]}
-
-services:
-	# numbers next to the items come from services tagged sidebar.badge (see SidebarMenu)
-	- App\Presentation\Backend\Accessory\Menu\SidebarMenu(%sidebar%, tagged(sidebar.badge))

@@ -31,7 +31,6 @@ podle nastavení v `extra.drago-tools` v `composer.json` tohoto balíčku.
 - [Docker](https://github.com/drago-ex/project-docker)
 - [Databáze](https://github.com/drago-ex/project-docker-db)
 - [Přihlašování](https://github.com/drago-ex/project-auth)
-- [Oprávnění (ACL)](https://github.com/drago-ex/project-permission)
 - [Administrace](https://github.com/drago-ex/project-backend)
 - [Rozhraní administrace](https://github.com/drago-ex/project-backend-ui)
 - [Nastavení aplikace](https://github.com/drago-ex/project-settings)
@@ -45,12 +44,17 @@ stránkami se zaškrtnutým „Zobrazit v menu“ (logo vede na úvodní stránk
 (účet, administrace, pokud do ní smí, motiv, odhlášení), případně tlačítkem pro přihlášení. Úvodní stránka zobrazí
 nejnovější články blogu.
 
-## Providery oprávnění
+---
 
-Pravidla přístupu obsažených balíčků se vygenerují do projektu příkazem:
+## Volitelné doplňky
+
+Balíček funguje i bez nich. Pokud je projekt potřebuje, nastavte je ručně podle popisu níže.
+
+### Oprávnění
+
+Preset neobsahuje žádná oprávnění. [drago-ex/project-preset-permission](https://github.com/drago-ex/project-preset-permission)
+je přidá: menu administrace podle privilegií, tlačítka pro zápis a role z databáze.
 
 ```bash
-php vendor/bin/drago-commands
+composer require drago-ex/project-preset-permission
 ```
-
-Menu administrace zobrazuje jen položky, které uživatel smí otevřít.

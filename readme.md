@@ -31,7 +31,6 @@ as set in `extra.drago-tools` of this package's `composer.json`.
 - [Docker Setup](https://github.com/drago-ex/project-docker)
 - [Database Layer](https://github.com/drago-ex/project-docker-db)
 - [Authentication](https://github.com/drago-ex/project-auth)
-- [Permissions (ACL)](https://github.com/drago-ex/project-permission)
 - [Backend Admin](https://github.com/drago-ex/project-backend)
 - [Backend UI](https://github.com/drago-ex/project-backend-ui)
 - [Application Settings](https://github.com/drago-ex/project-settings)
@@ -45,12 +44,17 @@ static pages marked "Show in the menu" (the logo leads to the home page), and th
 (account, administration when the user may open it, theme, sign out) or a sign-in button. The home page shows
 the latest articles of the blog.
 
-## Permission providers
+---
 
-The access rules of the included packages are generated into the project by:
+## Optional add-ons
+
+The package works without them. Set them up by hand as described below when the project needs them.
+
+### Permissions
+
+The preset contains no permissions. [drago-ex/project-preset-permission](https://github.com/drago-ex/project-preset-permission)
+adds them: the administration menu by privileges, write buttons and roles from the database.
 
 ```bash
-php vendor/bin/drago-commands
+composer require drago-ex/project-preset-permission
 ```
-
-The administration menu shows only the items the user may open.
