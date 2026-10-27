@@ -50,5 +50,5 @@ nejnovější články blogu.
 Pravidla přístupu obsažených balíčků se vygenerují do projektu příkazem:
 
 ```bash
-php vendor/bin/create-permission --packages
+php vendor/bin/drago-commands
 ```

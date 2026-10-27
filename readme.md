@@ -50,5 +50,5 @@ the latest articles of the blog.
 The access rules of the included packages are generated into the project by:
 
 ```bash
-php vendor/bin/create-permission --packages
+php vendor/bin/drago-commands
 ```
