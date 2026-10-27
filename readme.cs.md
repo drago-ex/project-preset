@@ -1,7 +1,5 @@
 # Drago Project Preset
 
-[English](readme.md) | Čeština
-
 Preset, který z nainstalovaného Drago Project udělá kompletní sestavu s administrací.
 
 [![PHP version](https://badge.fury.io/ph/drago-ex%2Fproject-preset.svg)](https://badge.fury.io/ph/drago-ex%2Fproject-preset)

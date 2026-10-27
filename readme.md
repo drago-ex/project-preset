@@ -1,7 +1,5 @@
 # Drago Project Preset
 
-English | [Čeština](readme.cs.md)
-
 Overlay preset that turns an installed Drago Project into a complete backend-ready stack.
 
 [![PHP version](https://badge.fury.io/ph/drago-ex%2Fproject-preset.svg)](https://badge.fury.io/ph/drago-ex%2Fproject-preset)
