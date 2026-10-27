@@ -7,7 +7,7 @@ Use this file as package-specific guidance when working in this repository. Keep
 - **Type**: drago-tools-resource
 - **Purpose**: Overlay preset that turns an installed Drago Project into a backend-ready stack.
 - **PHP**: >=8.3 <9
-- **Runtime dependencies**: drago-ex/project-docker (^2.0), drago-ex/project-docker-db (^2.0), drago-ex/project-front (^2.0), drago-ex/project-backend (^2.0), drago-ex/project-backend-ui (^2.0), drago-ex/permission (^2.4), drago-ex/datagrid (^2.0), drago-ex/project-permission (^1.0), drago-ex/project-settings (^1.0), drago-ex/project-blog (^1.0), drago-ex/project-static-page (^1.0)
+- **Runtime dependencies**: drago-ex/translator (^4.0), drago-ex/project-docker (^1.0), drago-ex/project-docker-db (^1.0), drago-ex/project-front (^1.0), drago-ex/project-backend (^1.0), drago-ex/project-backend-ui (^1.0), drago-ex/permission (^1.0), drago-ex/datagrid (^1.0), drago-ex/project-permission (^1.0), drago-ex/project-settings (^1.0), drago-ex/project-blog (^1.0), drago-ex/project-static-page (^1.0)
 - **License**: MIT
 
 ## Repository Layout
