@@ -52,3 +52,5 @@ The access rules of the included packages are generated into the project by:
 ```bash
 php vendor/bin/drago-commands
 ```
+
+The administration menu shows only the items the user may open.

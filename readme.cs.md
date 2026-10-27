@@ -52,3 +52,5 @@ Pravidla přístupu obsažených balíčků se vygenerují do projektu příkaze
 ```bash
 php vendor/bin/drago-commands
 ```
+
+Menu administrace zobrazuje jen položky, které uživatel smí otevřít.
