@@ -8,12 +8,8 @@ Preset, který z nainstalovaného Drago Project udělá kompletní sestavu s adm
 ## Požadavky
 
 - PHP >= 8.3, < 9
-- Nette Framework
-- Composer
+- [Drago Project](https://github.com/drago-ex/project)
 - Docker
-- Node.js
-- Bootstrap
-- Naja
 
 ## Instalace
 

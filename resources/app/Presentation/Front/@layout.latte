@@ -53,9 +53,7 @@
 							</button>
 							<ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm">
 								<li><a class="dropdown-item" n:href=":Account:">{_'Account'}</a></li>
-								<li n:if="$user->isPermitted('Backend:Admin', 'default-read')">
-									<a class="dropdown-item" n:href=":Backend:Admin:">{_'Administration'}</a>
-								</li>
+								<li><a class="dropdown-item" n:href=":Backend:Admin:">{_'Administration'}</a></li>
 								<li><hr class="dropdown-divider"></li>
 								<li>{include '../Accessory/Widget/@theme-switch.latte', class: 'dropdown-item', icon: true}</li>
 								<li><hr class="dropdown-divider"></li>
