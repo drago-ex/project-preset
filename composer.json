@@ -13,7 +13,8 @@
 		"drago-ex/project-backend-ui": "^1.0",
 		"drago-ex/project-settings": "^1.0",
 		"drago-ex/project-blog": "^1.0",
-		"drago-ex/project-static-page": "^1.0"
+		"drago-ex/project-static-page": "^1.0",
+		"drago-ex/project-gallery": "^1.0"
 	},
 	"require-dev": {
 		"phpstan/phpstan-nette": "^2.0"

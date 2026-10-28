@@ -32,12 +32,13 @@ podle nastavení v `extra.drago-tools` v `composer.json` tohoto balíčku.
 - [Nastavení aplikace](https://github.com/drago-ex/project-settings)
 - [Blog](https://github.com/drago-ex/project-blog)
 - [Statické stránky](https://github.com/drago-ex/project-static-page)
+- [Galerie](https://github.com/drago-ex/project-gallery)
 
 ## Veřejná část
 
 Preset nahradí jednoduchý layout veřejné části z project-front layoutem na Bootstrapu: navbar s blogem a statickými
 stránkami se zaškrtnutým „Zobrazit v menu“ (logo vede na úvodní stránku) a nabídkou přihlášeného uživatele
-(účet, administrace, pokud do ní smí, motiv, odhlášení), případně tlačítkem pro přihlášení. Úvodní stránka zobrazí
+(účet, administrace, motiv, odhlášení), případně tlačítkem pro přihlášení. Úvodní stránka zobrazí
 nejnovější články blogu.
 
 ---

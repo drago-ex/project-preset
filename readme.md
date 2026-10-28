@@ -32,12 +32,13 @@ as set in `extra.drago-tools` of this package's `composer.json`.
 - [Application Settings](https://github.com/drago-ex/project-settings)
 - [Blog](https://github.com/drago-ex/project-blog)
 - [Static Pages](https://github.com/drago-ex/project-static-page)
+- [Gallery](https://github.com/drago-ex/project-gallery)
 
 ## Front
 
 The preset replaces the plain front layout of project-front with a Bootstrap one: a navbar with the blog and the
 static pages marked "Show in the menu" (the logo leads to the home page), and the signed-in user's menu
-(account, administration when the user may open it, theme, sign out) or a sign-in button. The home page shows
+(account, administration, theme, sign out) or a sign-in button. The home page shows
 the latest articles of the blog.
 
 ---

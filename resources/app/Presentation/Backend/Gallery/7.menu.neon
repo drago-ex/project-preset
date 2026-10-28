@@ -1,0 +1,6 @@
+# Item of the administration menu (drago-ex/project-backend-ui merges the sidebar parameter; the key lets a later file extend it).
+parameters:
+	sidebar:
+		Content:
+			# images for the content of articles and pages
+			gallery: {title: Gallery, link: 'Gallery:', icon: fa-regular fa-images bell}
