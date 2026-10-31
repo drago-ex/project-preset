@@ -4,7 +4,6 @@ namespace App\Presentation\Front\Home;
 
 use App\Model\Blog\ArticleListFactory;
 use App\Presentation\BasePresenter;
-use Drago\Attr\AttributeDetectionException;
 
 
 /** @property-read HomeTemplate $template */
@@ -21,7 +20,6 @@ final class HomePresenter extends BasePresenter
 	}
 
 
-	/** @throws AttributeDetectionException */
 	public function renderDefault(): void
 	{
 		$this->template->list = $this->articleListFactory->create(limit: self::LatestArticles);

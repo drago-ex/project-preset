@@ -4,7 +4,6 @@ namespace App\Presentation;
 
 use App\Core\Settings\SettingsRequire;
 use App\Model\Page\PageMenu;
-use Drago\Attr\AttributeDetectionException;
 use Drago\Localization\TranslatorAdapter;
 use Nette\Application\UI\Presenter;
 use Nette\DI\Attributes\Inject;
@@ -21,7 +20,6 @@ abstract class BasePresenter extends Presenter
 	public PageMenu $pageMenu;
 
 
-	/** @throws AttributeDetectionException */
 	protected function beforeRender(): void
 	{
 		parent::beforeRender();
