@@ -86,8 +86,9 @@ body {
 	overflow: hidden;
 }
 
-// article text: larger and with more space between lines
-.blog-content {
+// Texy text of articles and pages: larger, with more space between lines; images as the cover of an article,
+// a 21:9 cut over the whole column
+.content {
 	font-size: 1.125rem;
 	line-height: 1.7;
 
@@ -98,8 +99,11 @@ body {
 	}
 
 	img {
-		max-width: 100%;
+		width: 100%;
 		height: auto;
+		aspect-ratio: 21 / 9;
+		object-fit: cover;
+		object-position: top;
 		border-radius: var(--bs-border-radius-lg);
 	}
 }
