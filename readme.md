@@ -29,29 +29,15 @@ as set in `extra.drago-tools` of this package's `composer.json`.
 - [Authentication](https://github.com/drago-ex/project-auth)
 - [Backend Admin](https://github.com/drago-ex/project-backend)
 - [Backend UI](https://github.com/drago-ex/project-backend-ui)
+- [Front UI](https://github.com/drago-ex/project-front-ui)
 - [Application Settings](https://github.com/drago-ex/project-settings)
 - [Blog](https://github.com/drago-ex/project-blog)
 - [Static Pages](https://github.com/drago-ex/project-static-page)
 - [Gallery](https://github.com/drago-ex/project-gallery)
 
-## Front
+## Permissions
 
-The preset replaces the plain front layout of project-front with a Bootstrap one: a navbar with the blog and the
-static pages marked "Show in the menu" (the logo leads to the home page), and the signed-in user's menu
-(account, administration, theme, sign out) or a sign-in button. The home page shows
-the latest articles of the blog.
-
----
-
-## Optional add-ons
-
-The package works without them. Set them up by hand as described below when the project needs them.
-
-### Permissions
-
-The preset contains no permissions. [drago-ex/project-preset-permission](https://github.com/drago-ex/project-preset-permission)
-adds them: the administration menu by privileges, write buttons and roles from the database.
-
-```bash
-composer require drago-ex/project-preset-permission
-```
+The preset contains the permissions: every presenter is checked by its `acl.neon` (drago-ex/permission), the
+buttons and the administration menu follow the privileges of the user, and
+[drago-ex/project-permission](https://github.com/drago-ex/project-permission) adds the administration of roles and
+privileges (menu item "Permissions").

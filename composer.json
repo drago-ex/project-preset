@@ -5,19 +5,17 @@
 	"license": "MIT",
 	"require": {
 		"php": ">=8.3 <9",
-		"drago-ex/translator": "^4.0.1",
 		"drago-ex/project-docker": "^1.0",
 		"drago-ex/project-docker-db": "^1.1",
 		"drago-ex/project-front": "^3.0",
 		"drago-ex/project-backend": "^1.0",
 		"drago-ex/project-backend-ui": "^1.0",
+		"drago-ex/project-front-ui": "^1.0",
 		"drago-ex/project-settings": "^2.0",
 		"drago-ex/project-blog": "^2.0",
 		"drago-ex/project-static-page": "^2.0",
-		"drago-ex/project-gallery": "^1.0"
-	},
-	"require-dev": {
-		"phpstan/phpstan-nette": "^2.0"
+		"drago-ex/project-gallery": "^1.0",
+		"drago-ex/project-permission": "^3.0"
 	},
 	"extra": {
 		"drago-tools": {
@@ -25,17 +23,9 @@
 				"replace-once": true,
 				"replace-priority": 300,
 				"replace": {
-					"resources/app": "app",
-					"resources/assets": "assets",
-					"resources/package.json": "package.json"
+					"resources/assets": "assets"
 				}
 			}
-		},
-		"drago-translator": {
-			"translation": "app/Presentation/Front/Translate"
 		}
-	},
-	"scripts": {
-		"phpstan": "phpstan analyse"
 	}
 }

@@ -1,5 +1,0 @@
-# Item of the administration menu (drago-ex/project-backend-ui merges the sidebar parameter; the key lets a later file extend it).
-parameters:
-	sidebar:
-		System:
-			settings: {title: Settings, link: 'Settings:', icon: fa-solid fa-globe bell}

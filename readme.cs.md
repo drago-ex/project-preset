@@ -29,29 +29,14 @@ podle nastavení v `extra.drago-tools` v `composer.json` tohoto balíčku.
 - [Přihlašování](https://github.com/drago-ex/project-auth)
 - [Administrace](https://github.com/drago-ex/project-backend)
 - [Rozhraní administrace](https://github.com/drago-ex/project-backend-ui)
+- [Rozhraní webu](https://github.com/drago-ex/project-front-ui)
 - [Nastavení aplikace](https://github.com/drago-ex/project-settings)
 - [Blog](https://github.com/drago-ex/project-blog)
 - [Statické stránky](https://github.com/drago-ex/project-static-page)
 - [Galerie](https://github.com/drago-ex/project-gallery)
 
-## Veřejná část
+## Oprávnění
 
-Preset nahradí jednoduchý layout veřejné části z project-front layoutem na Bootstrapu: navbar s blogem a statickými
-stránkami se zaškrtnutým „Zobrazit v menu“ (logo vede na úvodní stránku) a nabídkou přihlášeného uživatele
-(účet, administrace, motiv, odhlášení), případně tlačítkem pro přihlášení. Úvodní stránka zobrazí
-nejnovější články blogu.
-
----
-
-## Volitelné doplňky
-
-Balíček funguje i bez nich. Pokud je projekt potřebuje, nastavte je ručně podle popisu níže.
-
-### Oprávnění
-
-Preset neobsahuje žádná oprávnění. [drago-ex/project-preset-permission](https://github.com/drago-ex/project-preset-permission)
-je přidá: menu administrace podle privilegií, tlačítka pro zápis a role z databáze.
-
-```bash
-composer require drago-ex/project-preset-permission
-```
+Preset obsahuje oprávnění: každý presenter kontroluje jeho `acl.neon` (drago-ex/permission), tlačítka i menu
+administrace se řídí privilegii uživatele a [drago-ex/project-permission](https://github.com/drago-ex/project-permission)
+přidává správu rolí a privilegií (položka menu „Oprávnění“).
