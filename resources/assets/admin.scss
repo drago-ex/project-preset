@@ -4,8 +4,11 @@
 @import 'naja/gallery';
 @import 'naja/permission-toggle';
 @import 'drago-form/styles/tom-select';
-@import 'drago-component/styles/tooltip';
-@import 'drago-datagrid/styles/datagrid';
+@import 'compostrap/src/scss/datagrid';
+@import 'compostrap/src/scss/selection';
+@import 'compostrap/src/scss/datepicker';
+@import 'compostrap/src/scss/dropzone';
+@import 'core/admin-layout';
 
 //
 // admin style
