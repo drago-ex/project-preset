@@ -22,11 +22,15 @@ import { Datepicker } from 'compostrap/datepicker';
 // while a file is dragged over it, writes the names of the chosen files and sends the form of the gallery)
 import { DropzoneInput } from 'compostrap/dropzone';
 
+// compostrap: the charts of the dashboard (needs chart.js)
+import { Charts } from 'compostrap/chart';
+
 // page styles
 import './admin.scss';
 
 document.addEventListener('DOMContentLoaded', () => {
 	initAdminTheme();
+	Charts.init();
 });
 
 new DataGrid().initialize(naja);
