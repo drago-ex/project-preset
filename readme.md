@@ -17,6 +17,9 @@ assets composed for all its packages.
 composer require drago-ex/project-preset
 ```
 
+[Project Tools](https://github.com/drago-ex/project-tools) copies the files of the package into the project,
+where you adapt them.
+
 ## Included Packages
 
 - [Docker Database](https://github.com/drago-ex/project-docker-db)
